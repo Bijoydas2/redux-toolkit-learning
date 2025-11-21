@@ -3,7 +3,7 @@ import { useState } from 'react';
 import './App.css'
 import BookForm from './Components/BookForm'
 import BookList from './Components/BookList'
-
+import PostView from "./features/Posts/postView"
 
 function App() {
  const [bookToEdit, setBookToEdit]=useState(null);
@@ -19,6 +19,7 @@ function App() {
     <div className='bg-slate-400 min-h-screen '>
     <BookList onHandleEdit={handleEdit}/>
     <BookForm bookToEdit={bookToEdit} onCancel={hancleCancelEdit}/>
+    <PostView/>
     </div>
   )
 }
